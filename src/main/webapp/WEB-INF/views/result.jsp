@@ -9,10 +9,7 @@
 	Hello world!  
 </h1>
 
-<form action="./test" method="post">
-<input name="name">
-	<button type="submit">정석</button>
-</form>
+	<p> ${result} </p> 
 
 </body>
 </html>

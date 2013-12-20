@@ -1,8 +1,11 @@
-package com.marlboro.kjs;
+package com.marlboro.kjs.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,5 +38,20 @@ public class HomeController {
 		
 		return "home";
 	}
+	
+	@RequestMapping("/test")
+	public String test(HttpServletRequest rs,HttpServletResponse rp, Model model) {
+		String name = rs.getParameter("name");
+		logger.info("Welcome home! The client locale is {}.", name);
+		
+		
+		
+		
+		model.addAttribute("result", name );
+		
+		return "result";
+	}
+	
+	
 	
 }
